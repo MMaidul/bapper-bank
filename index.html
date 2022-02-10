@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <!-- bank-system -->
+    <section class="py-5 w-75 mx-auto">
+        <div class="container">
+            <!--bankMoneyCalc -->
+            <div class="row g-4">
+                <!-- display-1 -->
+                <div class="col-md-4">
+                    <div class="bg-info text-white p-4">
+                        <h3>Deposit</h3>
+                        <h1>$<span id="deposit">500</span></h1>
+                    </div>
+                </div>
+                <!-- display-2 -->
+                <div class="col-md-4">
+                    <div class="bg-primary text-white p-4">
+                        <h3>Withdraw</h3>
+                        <h1>$<span id="withdraw">600</span></h1>
+                    </div>
+                </div>
+                <!-- display-3 -->
+                <div class="col-md-4">
+                    <div class="bg-warning text-white p-4">
+                        <h3>Blance</h3>
+                        <h1>$<span id="blance">1200</span></h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deposit&Withdraw -->
+            <div class=" mt-5">
+                <div class="row">
+                    <!-- display-1 -->
+                    <div class="col-md-6">
+                        <article class="bg-danger text-white p-4">
+                            <h3>Please Deposit</h3>
+                            <input id="deposit-input" class="form-control" type="text" placeholder="$ amount you want to deposit" />
+                            <button id="deposit-btn" class="btn btn-light  mt-3 px-3">Deposit Money</button>
+                        </article>
+                    </div>
+                    <!-- display-2 -->
+                    <div class="col-md-6">
+                        <article class="bg-info text-white p-4">
+                            <h3>Please Withdraw</h3>
+                            <input id="withdraw-input" class="form-control" type="text" placeholder="$ amount you want to withdraw" />
+                            <button id="withdraw-btn" class="btn btn-light  mt-3 px-3">Withdraw Money</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- javascript -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
