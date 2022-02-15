@@ -1,31 +1,31 @@
-//getId;
-
-function getId(id) {
-    return document.getElementById(id);
-}
+document.getElementById('deposit-btn').addEventListener("click", function() {
 
 
-//getDeposit&WithdrawCalc;
-const depositTotal = getId('deposit');
-const WithdrawTotal = getId('withdraw');
-const blanceTotal = getId('blance');
+    const depositInput = document.getElementById("deposit-input");
+    const depositValue = depositInput.value;
+
+    const depositDisplay = document.getElementById("deposit");
+    depositDisplay.innerText = Number(depositDisplay.innerText) + Number(depositValue);
+
+    const displayBlance = document.getElementById("blance");
+    displayBlance.innerText = Number(displayBlance.innerText) + Number(depositDisplay.innerText);
+
+    depositInput.value = "";
+
+});
 
 
+document.getElementById("withdraw-btn").addEventListener('click', function() {
 
-//getDeposit&WithdrawAmount;
-const depositInput = getId('deposit-input');
-const depositBtn = getId('deposit-btn');
-const withdrawInput = getId('withdraw-input');
-const withdrawBtn = getId('withdraw-btn');
+    const withdrawInput = document.getElementById("withdraw-input");
+    const withdrawValue = withdrawInput.value;
 
+    const withdrawDisplay = document.getElementById("withdraw");
+    withdrawDisplay.innerText = Number(withdrawDisplay.innerText) + Number(withdrawValue);
 
-depositBtn.addEventListener('click', e => {
+    const displayBlance = document.getElementById("blance");
+    displayBlance.innerText = Number(displayBlance.innerText) - Number(withdrawDisplay.innerText);
 
-    const newDepositTotal = parseFloat(depositTotal.innerText) + parseFloat(depositInput.value);
-    console.log(newDepositTotal);
+    withdrawInput.value = "";
 
-    depositTotal.innerText = newDepositTotal;
-    depositInput.value = '';
-
-
-})
+});
